@@ -21,4 +21,4 @@ jobs:
 
       - name: List Phones
         shell: bash
-        run: python main.py --price "${{ inputs.price }}" --keywords "${{ inputs.keywords }}" | tee $GITHUB_STEP_SUMMARY
+        run: python main.py --price "${{ inputs.price }}" --keywords "${{ inputs.keywords }}" | tee "$GITHUB_STEP_SUMMARY"
