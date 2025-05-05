@@ -18,7 +18,10 @@ def get_phones() -> List[str]:
 
     ranking_lines = response.text.split("\n")
 
-    ranking = map(lambda line: line.strip(), filter(lambda line: line.find("numrank numall link") != -1, ranking_lines))
+    ranking = map(
+        lambda line: line.strip(),
+        filter(lambda line: line.find("numrank numall link") != -1, ranking_lines),
+    )
     ranking = map(__find_phone_names_from_line, ranking)
 
     return list(ranking)
