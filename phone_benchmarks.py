@@ -1,5 +1,5 @@
 import re
-from typing import Any, List
+from typing import List
 
 from requests import get
 
